@@ -29,9 +29,10 @@ namespace Texti
                     sb.AppendLine(text + " " + j);
                 }
 
-                var path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                var path = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
                 var fullFilePath = path + @"Texti.txt";
 
+                Debug.WriteLine(fullFilePath);
 
                 if (File.Exists(fullFilePath))
                     File.Delete(fullFilePath);
